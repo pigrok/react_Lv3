@@ -97,8 +97,13 @@ const Button = () => {
         </StBtn>
         <StBtn>
           <StTopBtn2
+            //버튼 클릭시 호출되는 콜백 함수를 정의
             onClick={() => {
+              // prompt 함수를 사용하여
+              // 팝업 창이 표시되고, 입력 필드에 값을 입력 => clickInput에 저장
               const clickInput = prompt("plz enter your input");
+              // 입력된 값이 null이 아니고, 공백을 제거한 후에도 빈 문자열이 아닌지 확인
+              // 입력 값이 유효한 경우 코드 실행
               if (clickInput !== null && clickInput.trim() !== "") {
                 alert("어렵나요?" + clickInput);
               }

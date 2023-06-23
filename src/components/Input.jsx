@@ -40,9 +40,10 @@ const Input = () => {
         <StForm
           onSubmit={(event) => {
             event.preventDefault();
-
+            // name이 비어있거나 price가 0인 경우 alert
             if (name === "" || price === 0) {
               alert("이름과 가격 모두 입력해주세요.");
+              // 함수 실행을 중단하고 이후의 코드를 실행하지 않음
               return;
             }
             alert(`이름: ${name}, 가격: ${price}`);
@@ -53,6 +54,9 @@ const Input = () => {
             <StInput
               type="text"
               value={name}
+              // 입력 값이 변경 될 때 마다 호출
+              // event.target.value를 통해 가져와서
+              // name 상태 변수를 업데이트 => 사용자가 입력한 값이 name 변수에 저장되고 출력
               onChange={(event) => {
                 setName(event.target.value);
               }}
@@ -62,9 +66,15 @@ const Input = () => {
             가격 : &nbsp;
             <StInput
               type="text"
+              // comma함수를 사용하여 가격 값에 콤마를 추가하여 표시
               value={comma(price)}
+              // 사용자가 입력한 값을 숫자 이 외의 문자는 제거하여 changePrice에 저장
+              // /[^0-9]/g은 숫자가 아닌 문자를 찾아 제거하는 역할
               onChange={(event) => {
                 const changePrice = event.target.value.replace(/[^0-9]/g, "");
+                // changePrice 변수의 값이 비어있는 경우 0으로 설정하고,
+                // 그렇지 않은 경우 parseInt()를 사용하여 문자열을 정수로 변환
+                // setPRice함수를 호출하여 price 상태 변수를 업데이트
                 setPrice(changePrice === "" ? 0 : parseInt(changePrice, 10));
               }}
             ></StInput>

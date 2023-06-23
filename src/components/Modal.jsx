@@ -65,12 +65,18 @@ const StCloseBtn = styled.button`
 `;
 
 function Modal() {
+  // 모달의 표시여부를 저장하는 상태 변수
+  //  초기 값은 false
   const [showModal, setShowModal] = useState(false);
 
+  // openModal 함수는 모달을 열기 위해
+  // setShowModal 함수를 호출하여 showModal값을 true로 변경
   const openModal = () => {
     setShowModal(true);
   };
 
+  // closeModal 함수는 모달을 닫기 위해
+  // showModal 함수를 호출 하여 showModal 값을 false로 변경
   const closeModal = () => {
     setShowModal(false);
   };
@@ -91,7 +97,9 @@ function Modal() {
       <StModalForm>
         <div>
           {" "}
+          {/* modal 버튼으로 클릭 시 openModal 함수가 호출되어 모달을 열음 */}
           <StModalBtn1 onClick={openModal}>open modal</StModalBtn1>
+          {/* showModal 값이 true인 경우에만 렌더링되는 조건부 렌더링 */}
           {showModal && (
             <StModal>
               <StModalContent>
@@ -100,6 +108,7 @@ function Modal() {
                   않아요.
                 </p>
                 <StBtnForm>
+                  {/* 닫기 버튼으로 클릭 시 closeModal이 호출되어 모달을 닫음 */}
                   <StCloseBtn onClick={closeModal}>닫기</StCloseBtn>
                   <StCloseBtn>확인</StCloseBtn>
                 </StBtnForm>
@@ -109,12 +118,16 @@ function Modal() {
         </div>
         <div>
           {" "}
+          {/* 클릭 시 openModal2 함수가 호출되어 두 번째 모달을 열음 */}
           <StModalBtn2 onClick={openModal2}>open modal2</StModalBtn2>
+          {/* showModal2 값이 true인 경우에만 렌더링되는 조건부 렌더링 */}
           {showModal2 && (
             <StModal onClick={closeModal2}>
+              {/* 모달의 내용을 담는 컨테이너로, 외부 영역 클릭 시 이벤트를 방지 */}
               <StModalContent onClick={(event) => event.stopPropagation()}>
                 <p>외부 영역을 클릭하면 닫히도록 만들었습니다.</p>
                 <StBtnForm>
+                  {/* 닫기 버튼입니다. 클릭 시 closeModal2 함수가 호출되어 모달을 닫음 */}
                   <StCloseBtn onClick={closeModal2}>닫기</StCloseBtn>
                 </StBtnForm>
               </StModalContent>
