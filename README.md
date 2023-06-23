@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# 📚 Create My Todo List
+<br/>
+<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🚩 What to implement
+Modal
+- Implement two modals.
+  - Modal not closing when `cancel`, `confirm`, and overlay is clicked
+  - Just a `close` button, and the modal closes when the overlay is clicked.
+  - The button that turns the modal `on` should look different for each. (You can reuse the button you created above.)
 
-## Available Scripts
+Button
+- Implement a total of 6 button shapes (see example page)
+  - Implement using `styled-components`, and make good use of props as appropriate.
+  - Once you've configured your (select) button component, try adding an icon as well
+ 
+Input
+- Implement a total of two inputs.
+  - Generic input
+  - When entering numbers, input with `comma ,` after every 3 digits
+  - Implement a form, enter a value in each input, and when the `save` button is pressed, display `{name: "any text", price: "amount without commas"}` in an `alert`.
+- Select
+- select를 구현합니다.
+  - When you click select, you'll get a list of options, and clicking an option will change the value of select.
+  - Implement to prevent it from being hidden by the parent element when select is clicked. Applying `overflow: hidden` to the parent element will cause the child component to be `hidden` when it overflows the parent component. Even if the parent component has the hidden property, select should not be hidden.
+# 📁./src/components/
+- `Button.jsx` 
+- `Input.jsx`
+- `Modal.jsx` 
+- `Select.jsx` 
 
-In the project directory, you can run:
+# 🖥️ Layout
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://github.com/pigrok/react_Lv3/assets/129926477/538c8277-12c5-44ce-92c9-aafbab473711" width="2000"/>
