@@ -21,9 +21,6 @@ Input
 - Implement a total of 6 button shapes (see example page)
   - Implement using `styled-components`, and make good use of props as appropriate.
   - Once you've configured your (select) button component, try adding an icon as well
- 
-Input
-
 - Implement a total of two inputs.
   - Generic input
   - When entering numbers, input with `comma ,` after every 3 digits
