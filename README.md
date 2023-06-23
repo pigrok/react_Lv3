@@ -1,10 +1,8 @@
 # 📚 Create My Todo List
-
 <br/>
 <br/>
 
 # 🚩 What to implement
-
 Modal
 
 - Implement two modals.
@@ -20,6 +18,12 @@ Button
 
 Input
 
+- Implement a total of 6 button shapes (see example page)
+  - Implement using `styled-components`, and make good use of props as appropriate.
+  - Once you've configured your (select) button component, try adding an icon as well
+ 
+Input
+
 - Implement a total of two inputs.
   - Generic input
   - When entering numbers, input with `comma ,` after every 3 digits
@@ -30,11 +34,10 @@ Input
   - Implement to prevent it from being hidden by the parent element when select is clicked. Applying `overflow: hidden` to the parent element will cause the child component to be `hidden` when it overflows the parent component. Even if the parent component has the hidden property, select should not be hidden.
 
 # 📁./src/components/
-
-- `Button.jsx`
+- `Button.jsx` 
 - `Input.jsx`
-- `Modal.jsx`
-- `Select.jsx`
+- `Modal.jsx` 
+- `Select.jsx` 
 
 # 🖥️ Layout
 
